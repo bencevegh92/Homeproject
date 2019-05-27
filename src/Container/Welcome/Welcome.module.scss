@@ -1,0 +1,24 @@
+.Welcome {
+    height: 100vh;
+    background-color: #e66861;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    
+    background-image: url('https://cognigen-cellular.com/images/babysitting-clipart-babysitting-10.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    
+    .Welcome__header {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .Welcome__paragraph {
+        margin: 0 auto;
+        padding: 0
+    }
+    .Welcome__button {
+
+    }
+}
