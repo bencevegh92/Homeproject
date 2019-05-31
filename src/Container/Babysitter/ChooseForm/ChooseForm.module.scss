@@ -1,0 +1,24 @@
+.ChooseForm {
+    height: 100vh;
+    color: white;
+    
+    background-image: url('https://previews.123rf.com/images/teacept/teacept1104/teacept110400017/9266940-toys-candy-childhood-memories-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .ChooseForm__fieldset {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        bottom: 25%;
+        left: 35%;
+        border-radius: 50px;
+        border: none;
+        background-color: #ff6347bf;
+        box-shadow: 0 0 10px #666;
+        text-shadow: 2px 2px 5px black;
+        .ChooseForm__profileBox {
+            
+        }
+    }
+}
