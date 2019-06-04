@@ -1,6 +1,7 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import classes from './Welcome.module.scss';
+
 
 const welcome = () => {
     return (
@@ -8,10 +9,11 @@ const welcome = () => {
             <fieldset className={classes.Welcome__fieldset}>
                 <h1 className={classes.Welcome__header}>Csepergő</h1>
                 <p className={classes.Welcome__paragraph}>Bébiszitter kereső</p>
-                <button className={classes.Welcome__button}>Lássunk Hozzá!</button>
+                <Link to='/chooseform'><button className={classes.Welcome__button}>Get started</button></Link>
             </fieldset>
         </div>
     );
+    
 }
 
 export default welcome;

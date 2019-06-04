@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
 import classes from './Babysitter.module.scss';
 
 import Welcome from './Welcome/Welcome';
-import ChooseForm from './ChooseForm/ChooseForm';
+import Chooseform from './ChooseForm/ChooseForm';
 
 class Babysitter extends Component {
     render() {
-        return(
+        return (
             <div className={classes.Babysitter}>
-                <ChooseForm />
+                <Route path='/' exact component={Welcome} />
+                <Route path='/chooseform' exact component={Chooseform} />
             </div>
         );
     }

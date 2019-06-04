@@ -1,24 +1,48 @@
 .ChooseForm {
-    height: 100vh;
     color: white;
-    
-    background-image: url('https://previews.123rf.com/images/teacept/teacept1104/teacept110400017/9266940-toys-candy-childhood-memories-background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10em;
     .ChooseForm__fieldset {
-        position: absolute;
-        width: 30%;
-        height: auto;
-        bottom: 25%;
-        left: 35%;
+        width: 60%;
+        padding: 1em;
+        margin: 0 auto;
         border-radius: 50px;
         border: none;
         background-color: #ff6347bf;
         box-shadow: 0 0 10px #666;
         text-shadow: 2px 2px 5px black;
         .ChooseForm__profileBox {
-            
+            display: flex;
+            .ChooseForm__profile {
+                width: 50%;
+                display: grid;
+                justify-content: center;
+                padding: 1em;
+            }
+            .ChooseForm__profileimg {
+                max-width: 100%;
+                width: 300px;
+                height: 300px;
+            }
+            .Welcome__button {
+                background-color: white;
+                border: none;
+                font-family: 'Acme', sans-serif;
+                color: black;
+                padding: 10px 30px;
+                text-align: center;
+                font-size: 1.2em;
+                margin: 4px 2px;
+                border-radius: 25px;
+                outline: none;
+                box-shadow: 0 0 20px #666;
+                transition: 0.4s;
+                &:hover {
+                    background-color: #ff4e00;
+                    color: white;
+                }
+              }
         }
     }
 }

@@ -1,15 +1,12 @@
 .Welcome {
-    background-color: #e66861;
     color: white;
     text-align: center;
     font-weight: bold;
     font-size: 3em;
+    padding-top: 10em;
     .Welcome__fieldset {
-        position: absolute;
         width: 30%;
-        height: auto;
-        bottom: 25%;
-        left: 35%;
+        margin: 0 auto;
         border-radius: 50px;
         border: none;
         background-color: #ff6347bf;
@@ -35,7 +32,7 @@
             border-radius: 25px;
             outline: none;
             box-shadow: 0 0 20px #666;
-            transition: 0.5s;
+            transition: 0.4s;
             &:hover {
                 background-color: #ff4e00;
                 color: white;
