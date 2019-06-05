@@ -1,0 +1,42 @@
+.Welcome {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    padding-top: 10em;
+    .Welcome__fieldset {
+        width: 30%;
+        margin: 0 auto;
+        border-radius: 50px;
+        border: none;
+        background-color: #ff6347bf;
+        box-shadow: 0 0 10px #666;
+        text-shadow: 2px 2px 5px black;
+        .Welcome__header {
+            margin: 0 auto;
+            padding: 0;
+        }
+        .Welcome__paragraph {
+            margin: 0 auto;
+            padding: 0
+        }
+        .Welcome__button {
+            background-color: white;
+            border: none;
+            font-family: 'Acme', sans-serif;
+            color: black;
+            padding: 10px 30px;
+            text-align: center;
+            font-size: 0.5em;
+            margin: 4px 2px;
+            border-radius: 25px;
+            outline: none;
+            box-shadow: 0 0 20px #666;
+            transition: 0.4s;
+            &:hover {
+                background-color: #ff4e00;
+                color: white;
+            }
+          }
+    }
+}

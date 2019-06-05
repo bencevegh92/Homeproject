@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import './App.scss';
 
-import Welcome from './Container/Welcome/Welcome';
+import Babysitter from './Container/Babysitter/Babysitter';
+
 
 class App extends Component {
   render () {
     return (
-      <div className='App'>
-        <Welcome />
-      </div>
+      <BrowserRouter>
+        <div className='App'>
+          <Babysitter />
+        </div>
+      </BrowserRouter>
+      
     );
   }
 }
