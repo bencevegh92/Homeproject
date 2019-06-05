@@ -1,0 +1,36 @@
+.Input {
+  width: 90%;
+  margin: 0 auto;
+  .Input__Box {
+    width: 70%;
+    height: 30px;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 10px;
+  }
+  .Input__Button {
+    width: 25%;
+    height: 30px;
+    margin-left: 5%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(201, 201, 201);
+    cursor: pointer;
+  }
+  .Input__Radio {
+    display: none;
+  }
+  .Search__by {
+    position: relative;
+    top: 13px;
+    padding: 8px 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(201, 201, 201);
+    cursor: pointer;
+  }
+  input.Input__Radio:checked + label {
+    background-color: #ff6060;
+  }
+}

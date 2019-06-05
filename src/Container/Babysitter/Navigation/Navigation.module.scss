@@ -1,0 +1,44 @@
+.Nav {
+  height: 40px;
+  .Nav__Logo {
+    display: inline-block;
+  }
+  .Nav__Profile {
+    float: right;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin: 0 8px;
+    border: 1px solid black;
+    border-radius: 16px;
+    cursor: pointer;
+    .Nav__ProfileHead {
+      border: 1px solid black;
+      margin: 3px auto 0;
+      width: 40%;
+      height: 40%;
+      border-radius: 10px;
+    }
+    .Nav__ProfileBody {
+      border: 1px solid black;
+      margin: 0 auto;
+      width: 60%;
+      height: 40%;
+      border-radius: 20px;
+    }
+  }
+  .Nav__Menu {
+    margin: 0 8px;
+    float: right;
+    width: 20px;
+    height: 100%;
+    cursor: pointer;
+    .Nav__Point {
+      background: black;
+      margin: 4px;
+      width: 4px;
+      height: 4px;
+      border-radius: 10px;
+    }
+  }
+}

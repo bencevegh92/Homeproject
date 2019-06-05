@@ -1,0 +1,50 @@
+.PersonCard {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  width: 180px;
+  height: 250px;
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 20px;
+  &:hover .PersonCard__Overlay {
+    height: 50%;
+  }
+  .PersonCard__Img {
+    background-image: url("http://secureservercdn.net/160.153.136.1/797.d15.myftpupload.com/wp-content/uploads/2016/09/27-beautiful-girl-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+    height: 85%;
+  }
+  .PersonCard__Overlay {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #008cba;
+    overflow: hidden;
+    width: 100%;
+    height: 15%;
+    transition: 0.7s ease;
+    .PersonCard__Name {
+      margin: 5px 0 0 10px;
+      font-weight: bold;
+      font-size: 120%;
+      display: inline-block;
+    }
+    .PersonCard__Age {
+      display: inline-block;
+      margin: 10px;
+    }
+    .PersonCard__Description {
+      margin: 10px 0 0 10px;
+      font-size: 90%;
+    }
+  }
+}
