@@ -5,6 +5,9 @@ import classes from './Babysitter.module.scss';
 
 import Welcome from './Welcome/Welcome';
 import Chooseform from './ChooseForm/ChooseForm';
+import Login from '../Babysitter/Login/Login';
+import Registration from '../Babysitter/Registration/Registration';
+import Homepage from './Homepage/Homepage';
 
 class Babysitter extends Component {
     render() {
@@ -12,6 +15,11 @@ class Babysitter extends Component {
             <div className={classes.Babysitter}>
                 <Route path='/' exact component={Welcome} />
                 <Route path='/chooseform' exact component={Chooseform} />
+
+                <Route path='/login' exact component={Login} />
+                <Route path='/registration' exact component={Registration} />
+
+                <Route path='/homepage' exact component={Homepage}/>
             </div>
         );
     }

@@ -1,105 +1,116 @@
-* {
-  box-sizing: border-box;
+@import '../UI/commonStyles.scss';
+.RegistrationBox {
+  padding-top: 25vh;
   .Registration {
-    position: relative;
-    padding: 10px;
-    background-color: #22b5c2;
-    width: 300px;
-    height: auto;
+    background-color: $background-carrot;
+    padding: 1em;
     border: none;
-    border-radius: 10px;
-    color: rgb(0, 4, 252);
-    margin: 100px auto;
-    box-shadow: 0px 0px 15px rgb(0, 0, 0);
-    .Registration__Title {
-      text-align: center;
-    }
-    .Title__Content {
+    border-radius: $border-radius;
+    width: 25%;
+    margin: 0 auto;
+    box-shadow: $box-shadow;
+    .Registration__Content {
       width: 90%;
-      margin: 0 5%;
-      .Title__Login {
+      margin: 0 auto;
+      .Login__Button {
         border: none;
+        outline: none;
+        text-align: center;
+        display: inline-block;
+        padding: $button-padding;
+        width: 50%;
+        margin: 10px 0;
+        background-color: $button-bg;
+        color: $button-text-color;
+        font-family: $button-font-family;
+        font-size: 1.2em;
+        transition: 0.3s;
+        box-shadow: $button-shadow;
+        &:hover {
+          background-color: $button-hover;
+          color: $main-color;
+        }
+        .ButtonLink {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+      .Login__LoginButton {
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
-        text-decoration: none;
-        text-align: center;
-        display: inline-block;
-        padding: 10px;
-        width: 50%;
-        height: auto;
-        margin: 10px 0;
-        background-color: #ffeead;
-      }
-      .Title__Registration {
+        }
+      
+      .Login__RegistrationButton {
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
-        border: none;
-        text-align: center;
-        display: inline-block;
-        padding: 10px;
-        width: 50%;
-        height: auto;
-        margin: 10px 0;
-        background-color: #ffcc5c;
       }
     }
-    ::placeholder {
-      color: white;
-    }
-    label {
-      margin: 10px 10px;
+    .Registration__label {
       width: 100%;
       position: relative;
-      margin: 10px auto;
+      margin: 0 auto;
       display: inline-block;
       color: white;
+      .Registration__Input {
+        width: 90%;
+        height: 20px;
+        margin: 10px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #fff;
+        padding: 15px;
+        background-color: rgba(0, 0, 0, 0);
+        color: #fff;
+      }
+      input:focus + span,
+      input:not(:placeholder-shown) + span {
+        opacity: 1;
+        transform: scale(0.75) translateY(-100%) translateX(-30px);
+      }
+      input:focus + span,
+      input:not(:-ms-input-placeholder) + span {
+        opacity: 1;
+        transform: scale(0.75) translateY(-100%) translateX(-30px);
+      }
+      .Registration__span {
+        margin: 0 auto;
+        padding: 15px 20px 0;
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        transition: 0.5s;
+        transition-timing-function: ease;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        opacity: 1;
+      }
     }
-
-    span {
-      margin: 0 auto;
-      padding: 15px 20px 0;
-      pointer-events: none;
-      position: absolute;
-      left: 0;
-      top: 0;
-      transition: 0.5s;
-      transition-timing-function: ease;
-      transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-      opacity: 0.5;
-    }
-
-    input:focus + span,
-    input:not(:placeholder-shown) + span {
-      opacity: 1;
-      transform: scale(0.75) translateY(-100%) translateX(-30px);
-    }
-
-    input:focus + span,
-    input:not(:-ms-input-placeholder) + span {
-      opacity: 1;
-      transform: scale(0.75) translateY(-100%) translateX(-30px);
-    }
-
-    .Registration__Input {
-      width: 90%;
-      height: 20px;
-      margin: 10px 5%;
+    .Registration__EnterButton {
       border: none;
-      border-bottom: 1px solid #fff;
-      padding: 15px;
-      background-color: #22b5c2;
-      color: #fff;
-    }
-    .Registration__Button {
-      display: block;
-      width: 90%;
-      height: 40px;
-      margin: 20px auto;
-      border-radius: 20px;
-      border: none;
-      background-color: #ff6f69;
-      color: #fff;
-      box-shadow: 0px 0px 4px black;
+      outline: none;
+      text-align: center;
+      display: inline-block;
+      padding: $button-padding;
+      border-radius: $button-border-radius;
+      width: 50%;
+      margin: 5% 25% 0;
+      background-color: $button-hover;
+      color: $main-color;
+      font-family: $button-font-family;
+      font-size: 1.2em;
+      transition: 0.3s;
+      box-shadow: $button-shadow;
+      &:hover {
+        background-color: $button-bg;
+        color: black;
+      }
+      .ButtonLink {
+        text-decoration: none;
+        color: inherit;
+      }
     }
   }
 }
+  
+
+

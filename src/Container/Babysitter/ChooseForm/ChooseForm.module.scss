@@ -1,5 +1,6 @@
+@import '../UI/commonStyles.scss';
 .ChooseForm {
-    color: white;
+    color: $main-color;
     text-align: center;
     font-weight: bold;
     padding-top: 10em;
@@ -7,11 +8,17 @@
         width: 60%;
         padding: 1em;
         margin: 0 auto;
-        border-radius: 50px;
+        border-radius: $border-radius;
         border: none;
-        background-color: #ff6347bf;
-        box-shadow: 0 0 10px #666;
-        text-shadow: 2px 2px 5px black;
+        background-color: $background-carrot;
+        box-shadow: $box-shadow;
+        text-shadow: $text-shadow;
+        .ChooseForm__legend {
+            font-size: 3em;
+            background-color: $button-hover;
+            padding: 0.1em 0.4em; 
+            border-radius: 25px;
+        }
         .ChooseForm__profileBox {
             display: flex;
             .ChooseForm__profile {
@@ -26,20 +33,20 @@
                 height: 300px;
             }
             .Welcome__button {
-                background-color: white;
+                background-color: $button-bg;
                 border: none;
                 font-family: 'Acme', sans-serif;
-                color: black;
-                padding: 10px 30px;
+                color: $button-text-color;
+                padding: $button-padding;
                 text-align: center;
-                font-size: 1.2em;
-                margin: 4px 2px;
-                border-radius: 25px;
+                font-size: 1.5em;
+                margin-top: 1em;
+                border-radius: $button-border-radius;
                 outline: none;
-                box-shadow: 0 0 20px #666;
+                box-shadow: $button-shadow;
                 transition: 0.4s;
                 &:hover {
-                    background-color: #ff4e00;
+                    background-color: $button-hover;
                     color: white;
                 }
               }

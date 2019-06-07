@@ -1,40 +1,69 @@
-import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
+
 import classes from './Registration.module.scss';
+import Axios from 'axios';
 
 
-const registration = () => {
-  return (
-    <div className={classes.Registration}>
-      <nav className={classes.Title__Content}>
-        <button className={classes.Title__Login}><Link to="/login">Belépés</Link></button>
-        <button className={classes.Title__Registration}>Regisztráció</button>
-      </nav>
-      <label>
-        <input className={classes.Registration__Input} placeholder=" " type="text" />
-        <span>Vezetéknév</span>
-      </label>
-      <label>
-        <input className={classes.Registration__Input} placeholder=" " type="text" />
-        <span>Keresztnév</span>
-      </label>
-      <label>
-        <input className={classes.Registration__Input} placeholder=" " type="password" />
-        <span>Jelszó</span>
-      </label>
-      <label>
-        <input className={classes.Registration__Input} placeholder=" " type="password" />
-        <span>Jelszó újra</span>
-      </label>
-      <label>
-        <input className={classes.Registration__Input} placeholder=" " type="email" />
-        <span>Email</span>
-      </label>
-      <button className={classes.Registration__Button}>Regisztráció</button>
-      
-    </div>
+class registration extends Component {
+  state = {
+    firstName: null,
+    lastName: null,
+    password: null,
+    email: null,
+  }
 
-  );
+  newUserHandler = () => {
+    const data = {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      password: this.state.password,
+      email: this.state.email
+    }
+    Axios.post('https://homeproject-b6d06.firebaseio.com/users.json' , data)
+      .then(response => {
+        console.log(response)
+      })
+  }
+
+  render() {
+    return (
+      <Fade>
+        <div className={classes.RegistrationBox}>
+          <fieldset className={classes.Registration}>
+            <div className={classes.Registration__Content}>
+              <Link className={classes.ButtonLink} to="/login"><button className={[classes.Login__Button, classes.Login__LoginButton].join(' ')}>Belépés</button></Link>
+              <button className={[classes.Login__Button, classes.Login__RegistrationButton].join(' ')}>Regisztráció</button>
+            </div>
+            <label className={classes.Registration__label}>
+              <input className={classes.Registration__Input} placeholder=" " type="text" onChange={(event) => this.setState({ firstName: event.target.value })}></input>
+              <span className={classes.Registration__span}>First Name</span>
+            </label>
+            <label className={classes.Registration__label}>
+              <input className={classes.Registration__Input} placeholder=" " type="text" onChange={(event) => this.setState({ lastName: event.target.value })}></input>
+              <span className={classes.Registration__span}>Last Name</span>
+            </label>
+            <label className={classes.Registration__label}>
+              <input className={classes.Registration__Input} placeholder=" " type="password" onChange={(event) => this.setState({ password: event.target.value })}></input>
+              <span className={classes.Registration__span}>Password</span>
+            </label>
+            <label className={classes.Registration__label}>
+              <input className={classes.Registration__Input} placeholder=" " type="password"></input>
+              <span className={classes.Registration__span}>Password</span>
+            </label>
+            <label className={classes.Registration__label}>
+              <input className={classes.Registration__Input} placeholder=" " type="email" onChange={(event) => this.setState({ email: event.target.value })}></input>
+              <span className={classes.Registration__span}>Email</span>
+            </label>
+            <button onClick={this.newUserHandler} className={classes.Registration__EnterButton}>Regisztráció</button>
+          </fieldset>
+
+        </div>
+      </Fade>
+    );
+  }
 }
+
 
 export default registration;
