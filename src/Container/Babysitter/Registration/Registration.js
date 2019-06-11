@@ -8,20 +8,20 @@ import Axios from 'axios';
 
 class registration extends Component {
   state = {
-    firstName: null,
-    lastName: null,
+    name: null,
+    userName: null,
     password: null,
     email: null,
   }
 
   newUserHandler = () => {
     const data = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
+      name: this.state.firstName,
+      userName: this.state.userName,
       password: this.state.password,
       email: this.state.email
     }
-    Axios.post('https://homeproject-b6d06.firebaseio.com/users.json' , data)
+    Axios.post('http://localhost:8081/users/' , data)
       .then(response => {
         console.log(response)
       })
@@ -37,12 +37,12 @@ class registration extends Component {
               <button className={[classes.Login__Button, classes.Login__RegistrationButton].join(' ')}>Regisztráció</button>
             </div>
             <label className={classes.Registration__label}>
-              <input className={classes.Registration__Input} placeholder=" " type="text" onChange={(event) => this.setState({ firstName: event.target.value })}></input>
-              <span className={classes.Registration__span}>First Name</span>
+              <input className={classes.Registration__Input} placeholder=" " type="text" onChange={(event) => this.setState({ name: event.target.value })}></input>
+              <span className={classes.Registration__span}>Name</span>
             </label>
             <label className={classes.Registration__label}>
-              <input className={classes.Registration__Input} placeholder=" " type="text" onChange={(event) => this.setState({ lastName: event.target.value })}></input>
-              <span className={classes.Registration__span}>Last Name</span>
+              <input className={classes.Registration__Input} placeholder=" " type="text" onChange={(event) => this.setState({ userName: event.target.value })}></input>
+              <span className={classes.Registration__span}>User Name</span>
             </label>
             <label className={classes.Registration__label}>
               <input className={classes.Registration__Input} placeholder=" " type="password" onChange={(event) => this.setState({ password: event.target.value })}></input>
@@ -50,7 +50,7 @@ class registration extends Component {
             </label>
             <label className={classes.Registration__label}>
               <input className={classes.Registration__Input} placeholder=" " type="password"></input>
-              <span className={classes.Registration__span}>Password</span>
+              <span className={classes.Registration__span}>Check Password</span>
             </label>
             <label className={classes.Registration__label}>
               <input className={classes.Registration__Input} placeholder=" " type="email" onChange={(event) => this.setState({ email: event.target.value })}></input>
