@@ -12,21 +12,24 @@ class registration extends Component {
     userName: null,
     password: null,
     email: null,
+    age: null,
+    description: null,
   }
 
   newUserHandler = () => {
     const data = {
-      name: this.state.firstName,
+      name: this.state.name,
       userName: this.state.userName,
       password: this.state.password,
-      email: this.state.email
+      email: this.state.email,
+      age: this.state.age,
+      description: this.state.description,
     }
     Axios.post('http://localhost:8081/users/' , data)
-      .then(response => {
+      /* .then(response => {
         console.log(response)
-      })
+      }) */
   }
-
   render() {
     return (
       <Fade>
@@ -41,6 +44,10 @@ class registration extends Component {
               <span className={classes.Registration__span}>Name</span>
             </label>
             <label className={classes.Registration__label}>
+              <input className={classes.Registration__Input} placeholder=" " type="text" onChange={(event) => this.setState({ age: event.target.value })}></input>
+              <span className={classes.Registration__span}>Age</span>
+            </label>
+            <label className={classes.Registration__label}>
               <input className={classes.Registration__Input} placeholder=" " type="text" onChange={(event) => this.setState({ userName: event.target.value })}></input>
               <span className={classes.Registration__span}>User Name</span>
             </label>
@@ -49,8 +56,8 @@ class registration extends Component {
               <span className={classes.Registration__span}>Password</span>
             </label>
             <label className={classes.Registration__label}>
-              <input className={classes.Registration__Input} placeholder=" " type="password"></input>
-              <span className={classes.Registration__span}>Check Password</span>
+              <input className={classes.Registration__Input} placeholder=" " type="text" maxLength='60' onChange={(event) => this.setState({ description: event.target.value })}></input>
+              <span className={classes.Registration__span}>Little description about yourself (Max 60 char)</span>
             </label>
             <label className={classes.Registration__label}>
               <input className={classes.Registration__Input} placeholder=" " type="email" onChange={(event) => this.setState({ email: event.target.value })}></input>
@@ -58,12 +65,10 @@ class registration extends Component {
             </label>
             <button onClick={this.newUserHandler} className={classes.Registration__EnterButton}>Regisztráció</button>
           </fieldset>
-
         </div>
       </Fade>
     );
   }
 }
-
 
 export default registration;

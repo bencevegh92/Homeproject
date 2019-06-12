@@ -2,8 +2,9 @@
 .personcard__container {
     width: 70%;
     margin: 0 auto;
+    padding: 2em 0;
     overflow: overlay;
-    height: 75vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -26,4 +27,13 @@
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     background-color: $background-carrot;
+}
+
+@media all and (max-width: 1199px) {} 
+@media all and (max-width: 991px) {} 
+@media all and (max-width: 768px) {} 
+@media all and (max-width: 575px) {
+    ::-webkit-scrollbar {
+        display: none
+    }
 }

@@ -7,7 +7,7 @@ const personCard = (props) => (
     <div className={classes.PersonCard__Overlay}>
       <div className={classes.PersonCard__Name}>{props.name}</div>
       <div className={classes.PersonCard__Age}>{props.age}</div>
-      <div className={classes.PersonCard__Description}>{props.email}</div>
+      <div className={classes.PersonCard__Description}>{props.description}</div>
     </div>
   </div >
 )
