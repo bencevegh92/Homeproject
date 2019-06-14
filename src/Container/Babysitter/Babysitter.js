@@ -8,6 +8,7 @@ import Chooseform from './ChooseForm/ChooseForm';
 import Login from '../Babysitter/Login/Login';
 import Registration from '../Babysitter/Registration/Registration';
 import Homepage from './Homepage/Homepage';
+import Profile from '../Babysitter/Navigation/Profile/Profile';
 
 class Babysitter extends Component {
     render() {
@@ -20,6 +21,8 @@ class Babysitter extends Component {
                 <Route path='/registration' exact component={Registration} />
 
                 <Route path='/homepage' exact component={Homepage}/>
+
+                <Route path='/profile' exact component={Profile} />
             </div>
         );
     }

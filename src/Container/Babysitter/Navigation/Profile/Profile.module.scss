@@ -1,0 +1,67 @@
+@import '../../UI/commonStyles.scss';
+.ProfileBox {
+    padding-top:15vh;
+    .Profile {
+        background-color: $background-carrot;
+        padding: 2em 0;
+        border: none;
+        border-radius: $border-radius;
+        width: 50%;
+        box-shadow: $box-shadow;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        .Profile__top {
+            display: flex;
+            margin: 0 5em;
+            .Profile__img {
+                background-image: url("http://secureservercdn.net/160.153.136.1/797.d15.myftpupload.com/wp-content/uploads/2016/09/27-beautiful-girl-image.jpg");
+                background-size: cover;
+                background-position: center;
+                border-radius: 25px;
+                width: 230px;
+                height: 300px;
+                padding: 0 3em;
+            }
+            .Profile__Info {
+                padding: 0 2em;
+                .Profile__Header {
+                    font-size: 3em;
+                    color: $main-color;
+                    text-shadow: $text-shadow;
+                }
+            }
+        }
+    }
+    .Profile__descriptionExtended {
+        padding: 0 3em;
+        .ProfileParagraph {
+            font-size: 1.3em;
+            color: $main-color;
+            text-shadow: $text-shadow;
+        }
+    }
+    .ProfileExit{
+        border: none;
+        margin-left: 1%;
+        border-radius: 15px;
+        text-align: center;
+        display: inline-block;
+        padding: 0.5em 1em;
+        background-color: #ff4e00;
+        color: white;
+        font-family: "Acme", sans-serif;
+        font-size: 1.2em;
+        transition: 0.3s;
+        box-shadow: 0 0 20px #666;
+        position: absolute;
+        top: 2em;
+        right: 2em;
+        cursor: pointer;
+        &:hover {
+            background-color: $button-bg;
+            color: black;
+        }
+    }
+}

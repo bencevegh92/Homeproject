@@ -44,7 +44,7 @@ class registration extends Component {
               <span className={classes.Registration__span}>Name</span>
             </label>
             <label className={classes.Registration__label}>
-              <input className={classes.Registration__Input} placeholder=" " type="text" onChange={(event) => this.setState({ age: event.target.value })}></input>
+              <input className={classes.Registration__Input} placeholder=" " type="number" min="18" max="99" onChange={(event) => this.setState({ age: event.target.value })}></input>
               <span className={classes.Registration__span}>Age</span>
             </label>
             <label className={classes.Registration__label}>
@@ -60,7 +60,7 @@ class registration extends Component {
               <span className={classes.Registration__span}>Little description about yourself (Max 60 char)</span>
             </label>
             <label className={classes.Registration__label}>
-              <input className={classes.Registration__Input} placeholder=" " type="email" onChange={(event) => this.setState({ email: event.target.value })}></input>
+              <input className={classes.Registration__Input} placeholder=" " type="email" required onChange={(event) => this.setState({ email: event.target.value })}></input>
               <span className={classes.Registration__span}>Email</span>
             </label>
             <button onClick={this.newUserHandler} className={classes.Registration__EnterButton}>Regisztráció</button>

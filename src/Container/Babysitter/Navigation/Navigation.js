@@ -15,10 +15,10 @@ const navigation = () => {
         <div className={classes.Nav__Point}></div>
         <div className={classes.Nav__Point}></div>
       </div>
-      <div className={classes.Nav__Profile}>
+      <Link to='/profile'><div className={classes.Nav__Profile}>
         <div className={classes.Nav__ProfileHead}></div>
         <div className={classes.Nav__ProfileBody}></div>
-      </div>
+      </div></Link>
     </nav>
   );
 }
